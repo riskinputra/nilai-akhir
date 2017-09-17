@@ -1,0 +1,57 @@
+PSEUCODE:
+
+SIMPAN  'namaMahasiswa';
+SIMPAN  'absensi';
+SIMPAN  'tugas';
+SIMPAN  'uts';
+SIMPAN  'uas';
+
+FUNGSI 'validasi'('namaMahasiswa')
+  IF 'namaMahasiswa' sama dengan kosong
+    TAMPILKAN Nama Mahasiswa Harus Disisi
+  ELSE
+    TAMPILKAN Nama Telah Diinput, Proses Dilanjutkan
+
+    FUNGSI 'hitungAbsensi' ('absensi')
+      (('absensi' dibagi 14) dikali 0.1) dikali 100
+
+    FUNGSI 'hitungTugas' ('tugas')
+      'tugas' dikali 0.2
+
+    FUNGSI 'hitungUts' ('uts')
+      'uts' dikali 0.3
+
+    FUNGSI 'hitungUas' ('uas')
+      'uas' dikali 0.4
+
+    FUNGSI 'hitungTotal'()
+      'hitungAbsensi' ditambah 'hitungTugas' ditambah 'hitungUts' ditambah hitungUas
+
+    FUNGSI 'grade'()
+      IF
+        'hitungTotal' lebih besar dari sama dengan 80 dan kurang dari sama dengan 100
+          SIMPAN 'hasil' sama dengan A
+      ELSE IF
+        'hitungTotal' lebih besar dari sama dengan 60 dan kurang dari 80
+          SIMPAN 'hasil' sama dengan B
+      ELSE IF
+        'hitungTotal' lebih besar dari sama dengan 40 dan kurang dari 60
+          SIMPAN 'hasil' sama dengan C
+      ELSE IF
+        'hitungTotal' lebih besar dari sama dengan 20 dan kurang dari 40
+        SIMPAN 'hasil' sama dengan D
+      ELSE
+        SIMPAN 'hasil' sama dengan E
+      ENDIF
+
+    FUNGSI 'hasilAkhir'()
+      TAMPILKAN 'namaMahasiswa'
+      TAMPILKAN 'hitungAbsensi'
+      TAMPILKAN 'hitungTugas'
+      TAMPILKAN 'hitungUts'
+      TAMPILKAN 'hitungUas'
+      TAMPILKAN 'hitungTotal'()
+
+    'hasilAkhir'()
+  ENDIF
+  'validasi'()
