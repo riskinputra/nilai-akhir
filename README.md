@@ -10,6 +10,8 @@ Persentasi umum yang sering di gunakan Universitas pada umumnnya adalah sebagai 
 
 Jadi ketika di total adalah 100% dengan menghilangkan persennya, nilai menjadi 100. Jika dimasukkan kedalam penilaian huruf A, B, C, D, E maka jika 100 berarti mahasiswa tersebut mendapatkan Nilai A.
 
+## Code
+
 ```
 var namaMahasiswa = prompt('Masukkan Nama Mahasiswa : ');
 var inputAbsensi = prompt('Masukkan Absensi dalam 14 Kali Pertemuan : ');
